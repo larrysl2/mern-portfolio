@@ -1,0 +1,23 @@
+export const experiences =[
+    {
+        _id:"1",
+        company:"Zoetis",
+        title:"Engineer",
+        period:"2022-persent",
+        description:"worked1",
+    }, 
+    {
+        _id:"2",
+        company:"JH",
+        title:"assEngineer",
+        period:"2021-persent",
+        description:"worked2",
+    },
+    {
+        _id:"3",
+        company:"MNTAP",
+        title:"internEngineer",
+        period:"2020-persent",
+        description:"worked3",
+    },
+];

@@ -2,17 +2,24 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const dbConfig = require("./config/dbConfig");
-const portfolioRoute=require("./routes/portfolioRoute");
+
+const portfolioRoute = require("./routes/portfolioRoute");
+
 app.use(express.json());
-app.use("/api/portfolio",portfolioRoute);
-const port = process.env.PORT || 3000;
+
+app.use("/api/portfolio", portfolioRoute);
+
+const port = process.env.PORT || 5000;
 const path = require("path");
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-  });
- }
+
+if(process.env.NODE_ENV === "production") 
+{
+    app.use(express.static(path.join(__dirname, "client/build")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client/build/index.html"));
+    } );
+}
+
 app.listen(port, () => {
-  console.log(`server running on port ${port}`);
+  console.log(`Server listening on port ${port}`);
 });

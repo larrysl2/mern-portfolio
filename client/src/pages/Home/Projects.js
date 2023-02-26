@@ -39,6 +39,9 @@ function Projects() {
             <p className="text-white">
             {projects[selectedItemIndex].description}
             </p>
+            <form className="text-white" action={projects[selectedItemIndex].link}>
+    <input type="submit" value="Live link to app!"/>
+</form>
           </div>
         </div>
       </div>

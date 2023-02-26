@@ -14,8 +14,7 @@ function Education() {
             
         <h1 className = "text-secondary text-2xl">University of Illinois at Urbana-Champaign</h1>
             <p className="text-white">
-            GPA 3.56 BA in chemical engineering
-            </p>
+            Graduated in 2021 with a Bachelor of Science in Chemical Enginering with Distinction</p>
           </div>
         </div>
       </div>
